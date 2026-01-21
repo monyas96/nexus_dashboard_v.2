@@ -14,7 +14,7 @@ if parent_dir not in sys.path:
 try:
     from app_core.config.pillars_config import PILLARS
     from app_core.layouts.pillar_layout import render_pillar_header, render_theme_card
-    from utils import render_logo_header
+    from scripts.utils import render_logo_header
     from app_core.components.navigation import render_page_logo
 except ImportError as e:
     st.error(f"Import error: {e}")

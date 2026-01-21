@@ -1,26 +1,26 @@
-# 🌍 Nexus Dashboard v.2 (4 Pillars - Module Complexity)
+#  Nexus Dashboard v.2 (4 Pillars - Module Complexity)
 
-![OSAA Logo](logos/OSAA%20identifier%20color.png)
+![OSAA Logo](assets/logos/OSAA%20identifier%20color.png)
 
 **A comprehensive, modular dashboard framework implementing the full Nexus Conceptual Framework across all four pillars, designed for expansion and reproducibility.**
 
 ---
 
-## 🎯 Project Overview
+##  Project Overview
 
 The **Nexus Dashboard v.2** is the full implementation of the Nexus Conceptual Framework, featuring a complete 4-pillar architecture with modular components designed for systematic expansion across all themes and topics. This repository represents the **"module complexity"** version—a production-ready framework that can be extended to cover the entire Nexus framework.
 
 ### Key Characteristics
 
-- ✅ **Full 4-Pillar Architecture**: Complete implementation of all four Nexus pillars
-- ✅ **Modular Design**: Reusable components and layouts for easy expansion
-- ✅ **Quadrant Logic**: Interactive 4-quadrant visualization system on the home page
-- ✅ **Scalable Structure**: Designed to accommodate all themes and topics across pillars
-- ✅ **Reproducible**: Clear documentation and standardized patterns for development
+-  **Full 4-Pillar Architecture**: Complete implementation of all four Nexus pillars
+- **Modular Design**: Reusable components and layouts for easy expansion
+-  **Quadrant Logic**: Interactive 4-quadrant visualization system on the home page
+-  **Scalable Structure**: Designed to accommodate all themes and topics across pillars
+-  **Reproducible**: Clear documentation and standardized patterns for development
 
 ---
 
-## 🔄 How This Differs from OSAA_DRM
+##  How This Differs from OSAA_DRM
 
 ### **Nexus Dashboard v.2** (This Repository)
 - **Scope**: Full 4-pillar framework (all pillars, themes, and topics)
@@ -50,38 +50,38 @@ The **Nexus Dashboard v.2** is the full implementation of the Nexus Conceptual F
 
 The dashboard implements the complete Nexus framework:
 
-1. **🕊️ Pillar 1: Durable Peace Requires Sustainable Development**
+1. ** Pillar 1: Durable Peace Requires Sustainable Development**
    - Theme 1: Historical Root Causes of Instability
    - Theme 2: Africa's Three Geographies
    - Theme 3: The State-Building Imperative
    - Theme 4: Development as a Foundation for Peace
 
-2. **💰 Pillar 2: Sustainable Development Requires Sustainable Financing**
+2. ** Pillar 2: Sustainable Development Requires Sustainable Financing**
    - Theme 1: Public Debt Management Quality
    - Theme 2: Domestic Institutions' Ability to Change Position in R/GVCs
    - Theme 3: Ownership Over Economic and Financial Flows
    - Theme 4: DRM Institutions and Systems *(Most developed)*
    - Theme 5: Derisking Strategies for Private Sector Engagement
 
-3. **🌐 Pillar 3: Sustainable Financing Requires Control Over Economic and Financial Flows**
+3. ** Pillar 3: Sustainable Financing Requires Control Over Economic and Financial Flows**
    - Theme 1: Resource Sovereignty
    - Theme 2: Balancing Internal and External Dependence
    - Theme 3: Pathways to Sustainability
    - Theme 4: Control and Allocation of Resources
 
-4. **🏛️ Pillar 4: Control Over Economic and Financial Flows Requires Strong Institutions**
+4. ** Pillar 4: Control Over Economic and Financial Flows Requires Strong Institutions**
    - Theme 1: Sustainable Finance as a Political Mindset
    - Theme 2: Institutional Strength
    - Theme 3: Domestic Resource Mobilization (DRM)
 
 ### Current Implementation Status
 
-- ✅ **Pillar Structure**: All 4 pillars configured and navigable
-- ✅ **Theme Pages**: All theme pages created (16 themes total)
-- ✅ **Topic Pages**: Topic 4.1-4.4 fully implemented (Pillar 2, Theme 4)
-- ✅ **Quadrant System**: Interactive 4-quadrant home page with flip cards
-- ✅ **Modular Components**: Reusable layouts, components, and visualization utilities
-- ⏳ **Expansion**: Ready for adding topics and indicators to other themes
+-  **Pillar Structure**: All 4 pillars configured and navigable
+-  **Theme Pages**: All theme pages created (16 themes total)
+-  **Topic Pages**: Topic 4.1-4.4 fully implemented (Pillar 2, Theme 4)
+-  **Quadrant System**: Interactive 4-quadrant home page with flip cards
+-  **Modular Components**: Reusable layouts, components, and visualization utilities
+-  **Expansion**: Ready for adding topics and indicators to other themes
 
 ---
 
@@ -127,9 +127,7 @@ nexus_dashboard_v.2/
 │   └── 99_indicator_explorer.py    # Indicator explorer tool
 │
 ├── special_pages/                  # Specialized page components
-│   ├── tab_4_3_3.py
-│   ├── tab_4_4_1.py
-│   └── tab_4_4_4.py
+│   └── tab_4_4_1.py                # Tab component for Topic 4.4.1
 │
 ├── data/                           # Data files
 │   ├── nexus.parquet               # Main indicator dataset
@@ -143,13 +141,19 @@ nexus_dashboard_v.2/
 │   ├── REPRODUCIBILITY.md          # Reproducibility guide
 │   └── ...
 │
-├── scripts/                        # Data processing scripts
-│   ├── composite_indicator_methods.py
-│   └── indicator_module_template.py
+├── scripts/                        # Utility and calculation scripts
+│   ├── __init__.py                 # Package initialization
+│   ├── utils.py                    # Helper utilities
+│   ├── universal_viz.py            # Core visualization utilities
+│   └── composite_indicator_methods.py  # Composite indicator calculations
 │
-├── universal_viz.py               # Core visualization utilities
-├── utils.py                        # Helper utilities
-└── logos/                          # Branding assets
+├── scripts/                        # Utility and calculation scripts
+│   ├── utils.py                    # Helper utilities
+│   ├── universal_viz.py            # Core visualization utilities
+│   └── composite_indicator_methods.py  # Composite indicator calculations
+└── assets/                         # Static assets
+    ├── logos/                      # Branding assets
+    └── loop_arrow.svg              # SVG assets
 ```
 
 ---
@@ -246,7 +250,7 @@ Layout templates in `app_core/layouts/`:
 
 ---
 
-## 🎨 Design Principles
+##  Design Principles
 
 ### Modularity
 - Each component is self-contained and reusable
@@ -270,7 +274,7 @@ Layout templates in `app_core/layouts/`:
 
 ---
 
-## 📊 Data Pipeline
+##  Data Pipeline
 
 The dashboard uses pre-processed data stored in `data/nexus.parquet`, which integrates data from multiple sources:
 
@@ -285,7 +289,7 @@ Data processing scripts are available in the `scripts/` directory.
 
 ---
 
-## 🔨 Development
+##  Development
 
 ### Adding a New Pillar
 
@@ -317,7 +321,7 @@ See [EXPANSION_GUIDE.md](docs/EXPANSION_GUIDE.md) for detailed instructions.
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 The dashboard includes:
 - Indicator Explorer (`pages/99_indicator_explorer.py`) for data exploration
@@ -345,19 +349,19 @@ When contributing:
 
 ---
 
-## 📄 License
+##  License
 
 This project is part of the OSAA (Office of the Special Adviser on Africa) initiative.
 
 ---
 
-## 📬 Contact
+##  Contact
 
 For questions or contributions, please contact the OSAA team or open an issue on GitHub.
 
 ---
 
-## 🔗 Related Repositories
+##  Related Repositories
 
 - **[OSAA_DRM](https://github.com/monyas96/OSAA_DRM)**: Theme 4 (DRM) focused implementation
 - **[nexus-pipeline](https://github.com/UN-OSAA/nexus-pipeline)**: Data processing pipeline
@@ -374,4 +378,4 @@ For questions or contributions, please contact the OSAA team or open an issue on
 
 ---
 
-**Last Updated**: 2025
+**Last Updated**: Nov 2025

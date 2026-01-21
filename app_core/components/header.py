@@ -6,7 +6,7 @@ def render_header():
     header_html = """
     <div class="header-bar">
         <div class="logo-title">
-            <img src="logos/OSAA identifier color.png" class="logo" />
+            <img src="assets/logos/OSAA identifier color.png" class="logo" />
             <span class="title">Nexus Policy App</span>
         </div>
         <div class="nav-links">

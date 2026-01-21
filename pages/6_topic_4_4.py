@@ -9,8 +9,8 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 import altair as alt
-import composite_indicator_methods as cim
-import universal_viz as uv
+import scripts.composite_indicator_methods as cim
+import scripts.universal_viz as uv
 from special_pages.tab_4_4_1 import render_tab_4_4_1
 
 # Navigation - Home button and logo

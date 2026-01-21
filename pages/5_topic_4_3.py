@@ -6,8 +6,8 @@ if parent_dir not in sys.path:
 
 import streamlit as st
 import pandas as pd
-import composite_indicator_methods as cim
-import universal_viz as uv
+import scripts.composite_indicator_methods as cim
+import scripts.universal_viz as uv
 
 # Navigation - Home button and logo
 try:

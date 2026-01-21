@@ -9,7 +9,7 @@ if parent_dir not in sys.path:
     sys.path.append(parent_dir)
 
 # Import the universal visualization module
-import universal_viz as uv
+import scripts.universal_viz as uv
 
 # Navigation - Home button and logo
 try:

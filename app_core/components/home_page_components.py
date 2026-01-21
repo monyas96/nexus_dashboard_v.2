@@ -12,7 +12,7 @@ from pathlib import Path
 def render_introduction_section():
     """Render the introduction section explaining the Nexus Policy App."""
     # Load and encode the logo image
-    logo_path = Path("logos/OSAA additional graphic (1).png")
+    logo_path = Path("assets/logos/OSAA additional graphic (1).png")
     logo_html = ""
     
     if logo_path.exists():
@@ -22,7 +22,7 @@ def render_introduction_section():
                 logo_html = f'<img src="data:image/png;base64,{img_data}" alt="OSAA Logo" class="intro-logo">'
         except Exception:
             # Fallback: try relative path in HTML
-            logo_html = '<img src="logos/OSAA additional graphic (1).png" alt="OSAA Logo" class="intro-logo">'
+            logo_html = '<img src="assets/logos/OSAA additional graphic (1).png" alt="OSAA Logo" class="intro-logo">'
     
     html_content = f"""
     <div class="intro-section">

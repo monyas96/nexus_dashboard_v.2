@@ -4,7 +4,7 @@ DRM and De-Risking Strategies
 """
 import streamlit as st
 from app_core.config.pillars_config import PILLARS, TOPICS
-from utils import render_logo_header
+from scripts.utils import render_logo_header
 
 render_logo_header()
 

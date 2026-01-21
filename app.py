@@ -13,7 +13,7 @@ with open("app_core/styles/style_osaa.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 # === Top Logo Row ===
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
-LOGO_PATH_OSAA = os.path.join(APP_DIR, "logos", "OSAA identifier color.png")
+LOGO_PATH_OSAA = os.path.join(APP_DIR, "assets", "logos", "OSAA identifier color.png")
 col1, col2, col3 = st.columns([1, 6, 1])
 with col1:
     st.logo(LOGO_PATH_OSAA, size="large")

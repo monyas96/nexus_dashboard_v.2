@@ -15,7 +15,7 @@ def render_page_logo(position="top-right"):
         position: Where to position the logo ("top-right", "top-left", "top-center")
     """
     # Load and encode the logo image
-    logo_path = Path("logos/OSAA additional graphic (1).png")
+    logo_path = Path("assets/logos/OSAA additional graphic (1).png")
     
     if not logo_path.exists():
         return
