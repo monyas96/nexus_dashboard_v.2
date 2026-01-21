@@ -9,7 +9,7 @@ st.set_page_config(
 )
 import os
 from pathlib import Path
-with open("style_osaa.css") as f:
+with open("app_core/styles/style_osaa.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 # === Top Logo Row ===
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -47,7 +47,6 @@ pages = [
     st.Page("pages/themes/pillar4_theme2.py", title="Pillar 4 Theme 2: Institutional Strength"),
     st.Page("pages/themes/pillar4_theme3.py", title="Pillar 4 Theme 3: DRM"),
     # Legacy pages (kept for backwards compatibility)
-    st.Page("pages/ 1_pillar_2.py", title="Pillar 2: Legacy"),
     st.Page("pages/2_theme_4.py", title="Theme 4: DRM Systems"),
     st.Page("pages/3_topic_4_1.py", title="Topic 4.1: Public Expenditures"),
     st.Page("pages/4_topic_4_2.py", title="Topic 4.2: Budget and Tax Revenues"),

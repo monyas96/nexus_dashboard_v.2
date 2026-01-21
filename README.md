@@ -1,172 +1,377 @@
-
-# 🌍 Nexus Dashboard
+# 🌍 Nexus Dashboard v.2 (4 Pillars - Module Complexity)
 
 ![OSAA Logo](logos/OSAA%20identifier%20color.png)
 
-**A data-driven tool for development nexus thinking, highlighting the interplay between peace, sustainable financing, and strong institutions.**
+**A comprehensive, modular dashboard framework implementing the full Nexus Conceptual Framework across all four pillars, designed for expansion and reproducibility.**
 
 ---
 
-## 🚀 Overview
+## 🎯 Project Overview
 
-The Nexus Dashboard delivers interactive visualizations and analytics that connect policy and real-world impact. This tool focuses on the crucial linkage between domestic resource mobilization, sustainable financing, and institutional development across four pillars:
+The **Nexus Dashboard v.2** is the full implementation of the Nexus Conceptual Framework, featuring a complete 4-pillar architecture with modular components designed for systematic expansion across all themes and topics. This repository represents the **"module complexity"** version—a production-ready framework that can be extended to cover the entire Nexus framework.
 
-- 🕊️ **Pillar 1**: Durable Peace Requires Sustainable Development  
-- 💰 **Pillar 2**: Sustainable Development Requires Sustainable Financing  
-- 🌐 **Pillar 3**: Sustainable Financing Requires Control Over Economic and Financial Flows  
-- 🏛️ **Pillar 4**: Control Over Economic and Financial Flows Requires Strong Institutions  
+### Key Characteristics
 
-🔎 *The dashboard currently showcases Pillar 2 with a deep dive into* **Theme 4: Domestic Resource Mobilization (DRM) Systems.**
-
----
-
-## ✨ Features
-
-- **Interactive Data Exploration**: Filter and explore economic and financial indicators by country and region  
-- **Visual Analytics**: Intuitive charts and maps for comparative analysis  
-- **Structured Framework**: Organized by pillars, themes, and topics for intuitive navigation  
-- **Country Profiles**: Detailed country-specific indicator data  
-- **Embedded Mind Map**: Interactive visualization of the Nexus framework  
+- ✅ **Full 4-Pillar Architecture**: Complete implementation of all four Nexus pillars
+- ✅ **Modular Design**: Reusable components and layouts for easy expansion
+- ✅ **Quadrant Logic**: Interactive 4-quadrant visualization system on the home page
+- ✅ **Scalable Structure**: Designed to accommodate all themes and topics across pillars
+- ✅ **Reproducible**: Clear documentation and standardized patterns for development
 
 ---
 
-## 📋 Content Structure
+## 🔄 How This Differs from OSAA_DRM
 
-The dashboard organizes content hierarchically:
+### **Nexus Dashboard v.2** (This Repository)
+- **Scope**: Full 4-pillar framework (all pillars, themes, and topics)
+- **Purpose**: Development and expansion platform for the complete Nexus framework
+- **Complexity**: Module complexity—full architecture with reusable components
+- **Target Users**: Developers, researchers, and analysts expanding the dashboard
+- **Status**: Framework ready for expansion across all pillars
+- **Focus**: Structural completeness and extensibility
 
-- **Pillars** → High-level conceptual frameworks  
-- **Themes** → Major focus areas within pillars  
-- **Topics** → Specific subjects within each theme  
-- **Indicators** → Measurable metrics for assessment  
+### **OSAA_DRM** ([Repository](https://github.com/monyas96/OSAA_DRM))
+- **Scope**: Theme 4 (Domestic Resource Mobilization) only
+- **Purpose**: Policy-ready dashboard for immediate DRM analysis
+- **Complexity**: Hidden complexity—optimized for end-user simplicity
+- **Target Users**: Policy analysts and decision-makers
+- **Status**: Production-ready, focused implementation
+- **Focus**: Immediate usability and policy insights
 
-### 🎯 Focus Area: Theme 4 – DRM Institutions and Systems
-
-This version focuses on four critical DRM topics:
-
-#### 📊 Topic 4.1: Public Expenditures
-- Public Expenditure Efficiency  
-- Expenditure Quality
-
-#### 🧾 Topic 4.2: Budget and Tax Revenues
-- Tax Revenue Collection  
-- Tax Administration Efficiency
-
-#### 📈 Topic 4.3: Capital Markets
-- Market Capitalization  
-- Financial Intermediation  
-- Institutional Investors
-
-#### 🚫 Topic 4.4: Illicit Financial Flows
-- Magnitude of Illicit Financial Flows  
-- Types of IFFs  
-- Detection and Enforcement
+**Think of it this way:**
+- **Nexus Dashboard v.2** = The full architectural blueprint (all pillars, expandable)
+- **OSAA_DRM** = A specialized, polished room in that building (Theme 4, ready to use)
 
 ---
 
-## 🔗 Data Pipeline
+## Architecture Overview
 
-The dashboard uses pre-processed data stored in `data/nexus.parquet`, which is generated from the [`nexus-pipeline`](https://github.com/UN-OSAA/nexus-pipeline) repository. This pipeline integrates data from sources such as:
+### Four Pillars Structure
 
-- World Bank PEFA Assessments  
-- IMF ISORA Database  
-- Global Financial Integrity (GFI)  
-- UNODC Crime Data  
-- World Justice Project
+The dashboard implements the complete Nexus framework:
+
+1. **🕊️ Pillar 1: Durable Peace Requires Sustainable Development**
+   - Theme 1: Historical Root Causes of Instability
+   - Theme 2: Africa's Three Geographies
+   - Theme 3: The State-Building Imperative
+   - Theme 4: Development as a Foundation for Peace
+
+2. **💰 Pillar 2: Sustainable Development Requires Sustainable Financing**
+   - Theme 1: Public Debt Management Quality
+   - Theme 2: Domestic Institutions' Ability to Change Position in R/GVCs
+   - Theme 3: Ownership Over Economic and Financial Flows
+   - Theme 4: DRM Institutions and Systems *(Most developed)*
+   - Theme 5: Derisking Strategies for Private Sector Engagement
+
+3. **🌐 Pillar 3: Sustainable Financing Requires Control Over Economic and Financial Flows**
+   - Theme 1: Resource Sovereignty
+   - Theme 2: Balancing Internal and External Dependence
+   - Theme 3: Pathways to Sustainability
+   - Theme 4: Control and Allocation of Resources
+
+4. **🏛️ Pillar 4: Control Over Economic and Financial Flows Requires Strong Institutions**
+   - Theme 1: Sustainable Finance as a Political Mindset
+   - Theme 2: Institutional Strength
+   - Theme 3: Domestic Resource Mobilization (DRM)
+
+### Current Implementation Status
+
+- ✅ **Pillar Structure**: All 4 pillars configured and navigable
+- ✅ **Theme Pages**: All theme pages created (16 themes total)
+- ✅ **Topic Pages**: Topic 4.1-4.4 fully implemented (Pillar 2, Theme 4)
+- ✅ **Quadrant System**: Interactive 4-quadrant home page with flip cards
+- ✅ **Modular Components**: Reusable layouts, components, and visualization utilities
+- ⏳ **Expansion**: Ready for adding topics and indicators to other themes
 
 ---
 
-## 🔧 Installation & Setup
+## 📂 Repository Structure
+
+```
+nexus_dashboard_v.2/
+├── app.py                          # Main Streamlit entry point
+├── requirements.txt                # Python dependencies
+├── README.md                       # This file
+│
+├── app_core/                       # Core modular components
+│   ├── components/                 # Reusable UI components
+│   │   ├── home_page_components.py    # Home page quadrant system
+│   │   ├── navigation.py              # Navigation components
+│   │   ├── quadrant_card.py          # Quadrant card component
+│   │   ├── flip_card_component.py    # Flip card for pillars
+│   │   └── ...
+│   ├── config/                     # Configuration files
+│   │   └── pillars_config.py        # Central pillar/theme/topic config
+│   ├── layouts/                    # Layout templates
+│   │   ├── pillar_layout.py        # Pillar page layouts
+│   │   └── topic_layout.py         # Topic page layouts
+│   └── styles/                     # Styling
+│       └── style_osaa.css          # OSAA branding styles
+│
+├── pages/                          # Streamlit pages
+│   ├── 0_home.py                   # Home page with quadrants
+│   ├── pillars/                    # Pillar landing pages
+│   │   ├── 1_pillar_1.py
+│   │   ├── 1_pillar_2.py
+│   │   ├── 1_pillar_3.py
+│   │   └── 1_pillar_4.py
+│   ├── themes/                     # Theme pages (16 themes)
+│   │   ├── pillar1_theme1.py
+│   │   ├── pillar2_theme4.py
+│   │   └── ...
+│   ├── 2_theme_4.py                # Legacy Theme 4 page
+│   ├── 3_topic_4_1.py              # Topic 4.1: Public Expenditures
+│   ├── 4_topic_4_2.py              # Topic 4.2: Budget and Tax Revenues
+│   ├── 5_topic_4_3.py              # Topic 4.3: Capital Markets
+│   ├── 6_topic_4_4.py              # Topic 4.4: Illicit Financial Flows
+│   └── 99_indicator_explorer.py    # Indicator explorer tool
+│
+├── special_pages/                  # Specialized page components
+│   ├── tab_4_3_3.py
+│   ├── tab_4_4_1.py
+│   └── tab_4_4_4.py
+│
+├── data/                           # Data files
+│   ├── nexus.parquet               # Main indicator dataset
+│   ├── iso3_country_reference.csv  # Country reference data
+│   ├── countries_codes_and_coordinates.csv
+│   └── ...
+│
+├── docs/                           # Documentation
+│   ├── ARCHITECTURE.md             # Architecture documentation
+│   ├── EXPANSION_GUIDE.md          # Guide for adding new content
+│   ├── REPRODUCIBILITY.md          # Reproducibility guide
+│   └── ...
+│
+├── scripts/                        # Data processing scripts
+│   ├── composite_indicator_methods.py
+│   └── indicator_module_template.py
+│
+├── universal_viz.py               # Core visualization utilities
+├── utils.py                        # Helper utilities
+└── logos/                          # Branding assets
+```
+
+---
+
+##  Quick Start
 
 ### Prerequisites
-- Python 3.8 or higher  
+
+- Python 3.9 or higher
+- pip (Python package manager)
 - Git
 
-### Quick Start
+### Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/monyas96/nexus_streamlit_dashboard.git
-cd nexus_streamlit_dashboard
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd nexus_dashboard_v.2
+   ```
 
-# Create and activate virtual environment
-python -m venv .venv
-source .venv/bin/activate   # On Windows: .venv\Scripts\activate
+2. **Create and activate a virtual environment:**
+   ```bash
+   python -m venv nexusapp
+   source nexusapp/bin/activate  # On Windows: nexusapp\Scripts\activate
+   ```
 
-# Install dependencies
-pip install -r requirements.txt
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-# Run the application
-streamlit run app.py
-🐳 Using Docker
-bash
-Copy
-Edit
-# Build the Docker image
-docker build -t nexus-dashboard .
+4. **Run the application:**
+   ```bash
+   streamlit run app.py
+   ```
 
-# Run the container
-docker run -p 8501:8501 nexus-dashboard
-🧱 Development with VS Code Dev Containers
-This repo supports VS Code Dev Containers.
+The application will be available at `http://localhost:8501`
 
-Install the "Remote - Containers" extension
+---
 
-Open this repo in VS Code
+##  Documentation
 
-Click “Reopen in Container” when prompted
+### Core Documentation Files
 
-📂 Project Structure
-bash
-Copy
-Edit
-nexus_streamlit_dashboard/
-├── app.py                     # Main app entry point
-├── requirements.txt           # Dependencies
-├── style_osaa.css             # Styling (branding)
-├── utils.py                   # Reusable utilities
-├── postprocessed.py           # Plotting utilities
-├── data/
-│   └── nexus.parquet          # Cleaned indicator dataset
-├── logos/
-│   └── OSAA identifier color.png
-├── pages/
-│   ├── 0_home.py              # Home
-│   ├── 1_pillar_2.py          # Pillar 2 landing
-│   ├── 2_theme_4.py           # Theme 4 overview
-│   ├── 3_topic_4_1.py         # Public Expenditures
-│   ├── 4_topic_4_2.py         # Budget & Tax Revenues
-│   ├── 5_topic_4_3.py         # Capital Markets
-│   ├── 6_topic_4_4.py         # Illicit Financial Flows
-│   └── 99_indicator_explorer.py  # Exploratory Data Analysis tool
-└── .devcontainer/             # Dev container config
-🧑‍💻 Development
-Adding New Pages
-Create a .py file in pages/
+- **[ARCHITECTURE.md](docs/ARCHITECTURE.md)**: Detailed architecture documentation
+- **[EXPANSION_GUIDE.md](docs/EXPANSION_GUIDE.md)**: Step-by-step guide for adding new pillars, themes, topics, and indicators
+- **[REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md)**: Guide for reproducing and maintaining the dashboard
 
-Add your st.set_page_config and st.title()
+### Development Guides
 
-Use layout, filters, and visuals consistent with other topic files
+- **[UNIFIED_DASHBOARD_TEMPLATE.md](docs/UNIFIED_DASHBOARD_TEMPLATE.md)**: Standardized structure for indicator pages
+- **[LAYOUT_EXAMPLES.md](docs/LAYOUT_EXAMPLES.md)**: Layout examples for different numbers of indicators
+- **[QUICK_REFERENCE.md](docs/QUICK_REFERENCE.md)**: Quick reference for dashboard patterns
 
-Update app.py to add your page to the navigation
+---
 
-Styling Guidelines
-The dashboard uses a consistent visual style via style_osaa.css:
+##  Key Features
 
-Primary Color: #072D92 (Dark Blue)
+### 1. Quadrant System
 
-Accent Color: #F58220 (Orange)
+The home page features an interactive 4-quadrant visualization system:
+- **Flip Cards**: Each pillar has a flip card showing description and themes
+- **Visual Navigation**: Color-coded quadrants for each pillar
+- **Systems Loop**: Visual representation of the interconnected pillars
 
-Background: #FDF4EC (Light Orange)
+### 2. Modular Components
 
-Highlight: #EC2E07 (Red)
+Reusable components in `app_core/components/`:
+- `home_page_components.py`: Quadrant rendering and home page sections
+- `quadrant_card.py`: Quadrant card component
+- `flip_card_component.py`: Interactive flip cards
+- `navigation.py`: Navigation components
 
-Contributing
-Contributions are welcome! Feel free to open issues or submit pull requests with improvements.
+### 3. Centralized Configuration
 
-📄 License
-MIT © Moneera Yassien
-UN Office of the Special Adviser on Africa
+All pillar, theme, and topic definitions in `app_core/config/pillars_config.py`:
+- Easy to add new pillars, themes, or topics
+- Centralized routing and metadata
+- Consistent structure across the dashboard
 
-📬 Contact
-For questions or contributions, feel free to reach out via GitHub 
+### 4. Standardized Layouts
 
+Layout templates in `app_core/layouts/`:
+- `pillar_layout.py`: Standard pillar page layout
+- `topic_layout.py`: Standard topic page layout
+- Consistent styling and structure
+
+### 5. Visualization Utilities
+
+`universal_viz.py` provides:
+- Standardized chart rendering
+- Consistent visualization patterns
+- Reusable visualization functions
+
+---
+
+## 🎨 Design Principles
+
+### Modularity
+- Each component is self-contained and reusable
+- Clear separation between data, logic, and presentation
+- Easy to extend without modifying existing code
+
+### Consistency
+- Standardized layouts and components
+- Unified styling via CSS
+- Consistent navigation patterns
+
+### Reproducibility
+- Clear documentation
+- Standardized patterns
+- Version-controlled configuration
+
+### Scalability
+- Designed to accommodate all 4 pillars
+- Ready for expansion to all themes and topics
+- Efficient data handling
+
+---
+
+## 📊 Data Pipeline
+
+The dashboard uses pre-processed data stored in `data/nexus.parquet`, which integrates data from multiple sources:
+
+- World Bank PEFA Assessments
+- IMF ISORA Database
+- Global Financial Integrity (GFI)
+- UNODC Crime Data
+- World Justice Project
+- And more...
+
+Data processing scripts are available in the `scripts/` directory.
+
+---
+
+## 🔨 Development
+
+### Adding a New Pillar
+
+1. Update `app_core/config/pillars_config.py` with pillar definition
+2. Create pillar page in `pages/pillars/`
+3. Add quadrant configuration in `pages/0_home.py`
+4. Create theme pages in `pages/themes/`
+
+See [EXPANSION_GUIDE.md](docs/EXPANSION_GUIDE.md) for detailed instructions.
+
+### Adding a New Theme
+
+1. Add theme to pillar in `app_core/config/pillars_config.py`
+2. Create theme page in `pages/themes/`
+3. Update pillar page to link to new theme
+
+### Adding a New Topic
+
+1. Add topic configuration
+2. Create topic page following [UNIFIED_DASHBOARD_TEMPLATE.md](docs/UNIFIED_DASHBOARD_TEMPLATE.md)
+3. Add indicators following standardized patterns
+
+### Adding a New Indicator
+
+1. Follow the indicator module template
+2. Use standardized visualization utilities
+3. Implement local filters and multi-view tabs
+4. Add supporting information expanders
+
+---
+
+## 🧪 Testing
+
+The dashboard includes:
+- Indicator Explorer (`pages/99_indicator_explorer.py`) for data exploration
+- Data gap visualization utilities
+- Standardized error handling
+
+---
+
+##  Code Style
+
+- Follow PEP 8 Python style guidelines
+- Use type hints where appropriate
+- Document functions and classes
+- Follow existing patterns for consistency
+
+---
+
+##  Contributing
+
+When contributing:
+1. Follow the existing architecture and patterns
+2. Update documentation as needed
+3. Test your changes thoroughly
+4. Ensure reproducibility
+
+---
+
+## 📄 License
+
+This project is part of the OSAA (Office of the Special Adviser on Africa) initiative.
+
+---
+
+## 📬 Contact
+
+For questions or contributions, please contact the OSAA team or open an issue on GitHub.
+
+---
+
+## 🔗 Related Repositories
+
+- **[OSAA_DRM](https://github.com/monyas96/OSAA_DRM)**: Theme 4 (DRM) focused implementation
+- **[nexus-pipeline](https://github.com/UN-OSAA/nexus-pipeline)**: Data processing pipeline
+
+---
+
+##  Roadmap
+
+- [ ] Complete indicator implementation for all themes
+- [ ] Enhanced data visualization features
+- [ ] Export functionality (PDF reports, CSV downloads)
+- [ ] Advanced filtering and comparison tools
+- [ ] User customization features
+
+---
+
+**Last Updated**: 2025
