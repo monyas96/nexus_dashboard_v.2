@@ -36,7 +36,7 @@ The pipeline integrates data from multiple sources:
 
 **Data Lineage:**
 1. Raw data collected from various international sources
-2. Processed and standardized in the [osaa-pipeline](https://github.com/mirianlima/osaa-pipeline) repository (refactored pipeline) or [nexus-pipeline](https://github.com/UN-OSAA/nexus-pipeline) repository
+2. Processed and standardized in the [nexus-pipeline](https://github.com/UN-OSAA/nexus-pipeline) repository
 3. Exported to `nexus.parquet` format
 4. Loaded into dashboard for visualization
 
