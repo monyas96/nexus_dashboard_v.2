@@ -17,7 +17,11 @@ This document describes the data files used in the Nexus Dashboard v.2, their st
 - `value` (float): Indicator value
 - `iso3` (string, optional): ISO3 country code
 
-**Data Source:** Generated from the [nexus-pipeline](https://github.com/UN-OSAA/nexus-pipeline) repository, which integrates data from multiple sources:
+**Data Source:** Generated from the OSAA data pipeline repositories:
+- **[osaa-pipeline](https://github.com/mirianlima/osaa-pipeline)**: Refactored OSAA data pipeline for policy analysis (current working repository)
+- **[nexus-pipeline](https://github.com/UN-OSAA/nexus-pipeline)**: Original nexus-pipeline repository
+
+The pipeline integrates data from multiple sources:
 - World Bank PEFA Assessments
 - IMF ISORA Database
 - Global Financial Integrity (GFI)
@@ -32,7 +36,7 @@ This document describes the data files used in the Nexus Dashboard v.2, their st
 
 **Data Lineage:**
 1. Raw data collected from various international sources
-2. Processed and standardized in the nexus-pipeline repository
+2. Processed and standardized in the [osaa-pipeline](https://github.com/mirianlima/osaa-pipeline) repository (refactored pipeline) or [nexus-pipeline](https://github.com/UN-OSAA/nexus-pipeline) repository
 3. Exported to `nexus.parquet` format
 4. Loaded into dashboard for visualization
 
@@ -220,7 +224,7 @@ filtered_data = indicator_data[indicator_data['year'] == selected_year]
 
 - **Missing Values:** Some indicators may have missing values for certain countries/years. The dashboard handles this gracefully.
 - **Data Coverage:** Coverage varies by indicator. Some indicators have data for many countries and years, others are more limited.
-- **Data Updates:** Data is updated periodically through the nexus-pipeline. Check the pipeline repository for update schedules.
+- **Data Updates:** Data is updated periodically through the [osaa-pipeline](https://github.com/mirianlima/osaa-pipeline) repository (refactored pipeline) or the [nexus-pipeline](https://github.com/UN-OSAA/nexus-pipeline) repository. Check the pipeline repositories for update schedules.
 
 ---
 
