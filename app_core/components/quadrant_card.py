@@ -4,6 +4,17 @@ import pandas as pd
 
 
 def _mini_chart(data: pd.DataFrame, chart_type: str, color: str):
+    """
+    Create a mini chart for display in quadrant cards.
+    
+    Args:
+        data: DataFrame with Year and Value columns (or year/value)
+        chart_type: Type of chart ('bar' or 'line')
+        color: Color for the chart
+        
+    Returns:
+        Altair Chart object
+    """
     if data is None or data.empty:
         data = pd.DataFrame({"Year": [2015, 2020, 2024], "Value": [0, 0, 0]})
 
@@ -39,6 +50,19 @@ def quadrant_card(
     link: str,
     key: str | None = None,
 ):
+    """
+    Render a quadrant card component with mini chart and navigation.
+    
+    Args:
+        pillar_name: Name of the pillar to display
+        color: Accent color for the card border
+        indicator_data: DataFrame with indicator data for the mini chart
+        chart_type: Type of chart ('bar' or 'line')
+        concept_text: Text describing the pillar concept
+        data_summary: Summary text about the data
+        link: Path to the pillar page
+        key: Optional unique key for the button
+    """
     with st.container():
         st.markdown(
             f"<div class='quadrant' style='border-top: 5px solid {color};'>",

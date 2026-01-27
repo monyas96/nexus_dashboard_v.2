@@ -2,6 +2,11 @@
 V2 Component for flip cards with integrated circular navigation buttons.
 Uses st.components.v2.component for reliable Streamlit integration.
 
+**DEPRECATED - DO NOT USE FOR NEW PAGES**
+
+This component is kept for backward compatibility but is not actively used.
+For all new development, use flip_card_component.py instead.
+
 Note: Requires Streamlit 1.51.0 or later for st.components.v2.component support.
 """
 import streamlit as st

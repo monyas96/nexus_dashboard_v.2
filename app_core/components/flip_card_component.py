@@ -1,6 +1,11 @@
 """
 Custom Streamlit component for flip cards that integrates with Streamlit navigation.
 Uses st.components.v1.html() to create interactive flip cards that can communicate with Streamlit.
+
+**USE THIS VERSION** for all new pages and components.
+This is the current, actively maintained version used throughout the dashboard.
+
+The flip_card_v2_component.py file is kept for backward compatibility but is not actively used.
 """
 import streamlit as st
 import streamlit.components.v1 as components

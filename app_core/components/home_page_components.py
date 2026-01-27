@@ -703,6 +703,11 @@ def render_step2_section(quadrants: list):
 
 
 def render_footer():
+    """
+    Render the footer section at the bottom of the home page.
+    
+    Displays OSAA branding and contact information.
+    """
     """Render the footer section."""
     footer_html = """
     <div class="footer">
